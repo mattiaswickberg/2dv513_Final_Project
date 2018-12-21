@@ -8,13 +8,12 @@ var pool = mysql.createPool({
   database: 'quizbase'
 })
 
-var insertStudent = function (student) {
+var insert = function (sql, student) {
   var time = Date.now();
   pool.getConnection(function (err, connection) {
     if (err) {
       console.log(err)
     }
-    var sql = "INSERT INTO student (student_id, name) VALUES ?"
     connection.query(sql, [student], function (err, result) {
       if (err) throw err
       console.log(result)
@@ -40,5 +39,5 @@ var quizQuery = function() {
   })
 }
 
-module.exports.insertStudent = insertStudent
+module.exports.insert = insert
 module.exports.quizQuery = quizQuery
