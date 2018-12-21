@@ -1,0 +1,25 @@
+{
+  "name": "2dv513_final_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "insert.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattiaswickberg/2dv513_Final_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattiaswickberg/2dv513_Final_Project/issues"
+  },
+  "homepage": "https://github.com/mattiaswickberg/2dv513_Final_Project#readme",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
+}
