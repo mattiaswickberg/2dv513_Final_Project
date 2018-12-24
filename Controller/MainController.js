@@ -1,4 +1,5 @@
 var MainView = require('../View/MainView')
+var Queries = require('../Model/Queries')
 
 module.exports = function(){
     var run = true
@@ -30,19 +31,27 @@ var Questions = function() {
         break
 
         case '1':
-        //TODO
+        Queries.QuestionsBySubject()
         break
 
         case '2':
-        //TODO
+        Queries.ListTests()
         break
 
         case '3':
-        //TODO
+        Queries.QuestionsForTest()
         break
 
         case '4':
-        //TODO
+        Queries.UnAnsweredQuestions()
+        break
+
+        case '5':
+        Queries.ResultsByQuestion()
+        break
+
+        case '6':
+        Queries.TotalAndAveragePerSubject()
         break
 
         default:
@@ -62,19 +71,19 @@ var Student = function() {
         break
 
         case '1':
-        //TODO
+        Queries.ListStudents()
         break
 
         case '2':
-        //TODO
+        Queries.StudentHighestScore()
         break
 
         case '3':
-        //TODO
+        Queries.StudentLowestScore()
         break
 
         case '4':
-        //TODO
+        Queries.TestsTakenPerStudent()
         break
 
         default:

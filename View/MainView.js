@@ -14,7 +14,7 @@ var QuestionsMenu = function() {
     console.log('1. List questions by subject')
     console.log('2. List tests')
     console.log('3. List questions for specific test')
-    console.log('4. List unused questions')
+    console.log('4. List questions with no results')
     console.log('5. See results for all questions')
     console.log('6. List results, total and average score per subject')
     console.log('b. Back to main menu')
