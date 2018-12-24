@@ -1,4 +1,4 @@
-var quizQuery = require('./server/database')
+var quizQuery = require('./Model/database')
 
 var MaxSCoreSql = "SELECT `student_id`, SUM(`score`) FROM `result` GROUP BY `student_id` ORDER BY SUM(`score`) DESC LIMIT 1"
 var QuestionResultSql = "SELECT question.question_id, question.question_body, result.score FROM question INNER JOIN result ON result.question_id=question.question_id ORDER BY question.question_id"

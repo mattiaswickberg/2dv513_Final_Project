@@ -1,4 +1,4 @@
-var insert = require("./server/database")
+var insert = require("../Model/database")
 
 var insertSql = "INSERT INTO student (student_id, name) VALUES ?"
 var students = [['13phde', 'Phedre Dulaney']]
