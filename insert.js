@@ -13,9 +13,6 @@ var alt = [
     ["a021", "Perceivable", true], ["a0022", "Robust", false], 
     ["a029", "Scalable Vector Graphics", true], ["a0030", "Standard Viscosity Gander", false], ["a031", "Simple Vector Graphics", false], ["a032", "Standard Vector Graphics", false]]
 
-var sqlBelongs = "INSERT INTO belongs_to (question_id, test_id) VALUES ?"
-var belongs = [[]]
-
 var sqlIsFor = "INSERT INTO isfor (alt_id, question_id) VALUES ?"
 var isFor = [["a001", "q001"], ["a002", "q001"], ["a003", "q001"], ["a004", "q001"], 
 ["a005", "q002"], ["a006", "q002"], ["a007", "q002"], ["a008", "q002"], 
@@ -37,13 +34,33 @@ var question = [
 ["q007", "The default human language of each Web page can be programmatically determined' is part of the WCAG. Which principle does it belong to?", "grägrä01", "Accessibility"], 
 ["q008", "In graphics, What does the abbreviation SVG mean?", "grägrä01", "graphics"]]
 
+
+var sqlBelongs = "INSERT INTO belongs_to (question_id, test_id) VALUES ?"
+var belongs = [["q001", "t001"], ["q003", "t001"], ["q004", "t001"], ["q008", "t001"], 
+["q002", "t002"], ["q005", "t002"], ["q007", "t002"], ["q008", "t002"], 
+["q001", "t003"], ["q002", "t003"], ["q005", "t003"], ["q004", "t003"]]
+
 var sqlResult = "INSERT INTO result (question_id, student_id, date, score) VALUES ?"
-var result = [[]]
+var result = [
+    //Test 1
+    ["q001", "13shco", "1537488000", 1], ["q003", "13shco", "1537488000", 0], ["q004", "13shco", "1537488000", 0], ["q008", "13shco", "1537488000", 1], 
+    ["q001", "13wiro", "1537488000", 0], ["q003", "13wiro", "1537488000", 1], ["q004", "13wiro", "1537488000", 1], ["q008", "13wiro", "1537488000", 1], 
+    ["q001", "13phde", "1537574400", 1], ["q003", "13phde", "1537574400", 1], ["q004", "13phde", "1537574400", 1], ["q008", "13phde", "1537574400", 1],
+    //Test 2
+    ["q002", "13shco", "1537574400", 0], ["q005", "13shco", "1537574400", 1], ["q007", "13shco", "1537574400", 0], ["q008", "13shco", "1537574400", 0], 
+    ["q002", "13wiro", "1537574400", 1], ["q005", "13wiro", "1537574400", 1], ["q007", "13wiro", "1537574400", 0], ["q008", "13wiro", "1537574400", 1], 
+    //Test 3
+    ["q001", "13shco", "1540166400", 1], ["q002", "13shco", "1540166400", 0], ["q005", "13shco", "1540166400", 0], ["q004", "13shco", "1540166400", 1], 
+    ["q001", "13wiro", "1540166400", 1], ["q002", "13wiro", "1540166400", 1], ["q005", "13wiro", "1540166400", 1], ["q004", "13wiro", "1540166400", 1], 
+    ["q001", "13phde", "1540252800", 1], ["q002", "13phde", "1540252800", 1], ["q005", "13phde", "1540252800", 1], ["q004", "13phde", "1540252800", 1]
+]
 
 var sqlTakes = "INSERT INTO takes (student_id, test_id, date) VALUES ?"
-var takes = [[]]
+var takes = [["13shco", "t001", "1537488000"], ["13shco", "t002", "1537574400"], ["13shco", "t003", "1540166400"], 
+["13wiro", "t001", "1537488000"], ["13wiro", "t002", "1537574400"], ["13wiro", "t003", "1540166400"], 
+["13phde", "t001", "1537574400"], ["13phde", "t003", "1540252800"]]
 
 var sqlTest = "INSERT INTO test (test_id, test_name) VALUES ?"
-var test = [[]]
+var test = [["t001", "ID Quiz 1, Te17A"], ["t001", "ID Quiz 1, Te17B"], ["t002", "ID Quiz 2, Te17A"], ["t002", "ID Quiz 2, Te17B"], ["t003", "ID Quiz 3, Te17A"]]
 
-insert.insert(insertSql, students);
+insert.insert(sqlBelongs, belongs);

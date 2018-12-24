@@ -23,13 +23,12 @@ var insert = function (sql, student) {
   })
 }
 
-var quizQuery = function() {
+var quizQuery = function(sql) {
   var time = Date.now();
   pool.getConnection(function (err, connection) {
     if (err) {
       console.log(err)
     }
-    var sql = "SELECT `subreddit`, MAX(`score`) FROM `reddit_comments`"
     connection.query(sql, function (err, result) {
       if (err) throw err
       console.log(result)
