@@ -21,7 +21,7 @@ var ResultsByQuestion = function () {
 }
 
 var TotalAndAveragePerSubject = function () {
-  return database.quizQuery('SELECT t1.subject, COUNT(t1.subject), SUM(t2.score), AVG(t2.score) FROM question AS t1 LEFT JOIN result AS t2 ON (t1.question_id=t2.question_id) GROUP BY t1.subject')
+  return database.quizQuery('SELECT t1.subject, COUNT(t1.subject) AS answers, SUM(t2.score) AS sum, AVG(t2.score) AS average FROM question AS t1 LEFT JOIN result AS t2 ON (t1.question_id=t2.question_id) GROUP BY t1.subject')
 }
 
 // Queries for students
@@ -30,15 +30,15 @@ var ListStudents = function () {
 }
 
 var StudentHighestScore = function () {
-  return database.quizQuery('SELECT `student_id`, SUM(`score`) FROM `result` GROUP BY `student_id` ORDER BY SUM(`score`) DESC LIMIT 1')
+  return database.quizQuery('SELECT `student_id`, SUM(`score`) AS sum FROM `result` GROUP BY `student_id` ORDER BY SUM(`score`) DESC LIMIT 1')
 }
 
 var StudentLowestScore = function () {
-  return database.quizQuery('SELECT `student_id`, SUM(`score`) FROM `result` GROUP BY `student_id` ORDER BY SUM(`score`) ASC LIMIT 1')
+  return database.quizQuery('SELECT `student_id`, SUM(`score`) AS sum FROM `result` GROUP BY `student_id` ORDER BY SUM(`score`) ASC LIMIT 1')
 }
 
 var TestsTakenPerStudent = function () {
-  return database.quizQuery('SELECT student_id, COUNT(student_id) FROM takes GROUP BY student_id')
+  return database.quizQuery('SELECT student_id, COUNT(student_id) AS sum FROM takes GROUP BY student_id')
 }
 
 module.exports = {

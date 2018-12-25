@@ -25,48 +25,49 @@ var Questions = function () {
 
     case '1':
       Queries.QuestionsBySubject().then((result) => {
-        console.log(result)
+        MainView.QuestionsBySubject(result)
         Questions()
       }).catch((err) => console.log(err))
       break
 
     case '2':
       Queries.ListTests().then((result) => {
-        console.log(result)
+        MainView.ListTests(result)
         Questions()
       }).catch((err) => console.log(err))
       break
 
     case '3':
       Queries.QuestionsForTest().then((result) => {
-        console.log(result)
+        MainView.QuestionsForTest(result)
         Questions()
       }).catch((err) => console.log(err))
       break
 
     case '4':
       Queries.UnAnsweredQuestions().then((result) => {
-        console.log(result)
+        MainView.UnAnsweredQuestions(result)
         Questions()
       }).catch((err) => console.log(err))
       break
 
     case '5':
       Queries.ResultsByQuestion().then((result) => {
-        console.log(result)
+        MainView.ResultsByQuestion(result)
         Questions()
       }).catch((err) => console.log(err))
       break
 
     case '6':
       Queries.TotalAndAveragePerSubject().then((result) => {
-        console.log(result)
+        MainView.TotalAndAveragePerSubject(result)
         Questions()
       }).catch((err) => console.log(err))
       break
 
     default:
       MainView.InvalidChoice()
+      Questions()
   }
 }
 
@@ -76,22 +77,22 @@ var Student = function () {
     MainController()
   } else if (input === '1') {
     Queries.ListStudents().then((result) => {
-      console.log(result)
+      MainView.ListStudents(result)
       Student()
     }).catch((err) => console.log(err))
   } else if (input === '2') {
     Queries.StudentHighestScore().then((result) => {
-      console.log(result)
+      MainView.StudentHighestScore(result)
       Student()
     }).catch((err) => console.log(err))
   } else if (input === '3') {
     Queries.StudentLowestScore().then((result) => {
-      console.log(result)
+      MainView.StudentLowestScore(result)
       Student()
     }).catch((err) => console.log(err))
   } else if (input === '4') {
     Queries.TestsTakenPerStudent().then((result) => {
-      console.log(result)
+      MainView.TestsTakenPerStudent(result)
       Student()
     }).catch((err) => console.log(err))
   } else {
