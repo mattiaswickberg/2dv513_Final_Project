@@ -1,0 +1,162 @@
+[
+{"type":"header","version":"4.8.3","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"quizbase"},
+{"type":"table","name":"alternative","database":"quizbase","data":
+[
+{"alt_id":"a001","alt_body":"Insinuation","is_correct":"1"},
+{"alt_id":"a0010","alt_body":"World Community Aquiline Guidelines","is_correct":"0"},
+{"alt_id":"a0014","alt_body":"Perceivable","is_correct":"0"},
+{"alt_id":"a0018","alt_body":"Not laws per se, but rather a set of designing principles formulated and often followed by the community.","is_correct":"0"},
+{"alt_id":"a002","alt_body":"Continuation","is_correct":"0"},
+{"alt_id":"a0022","alt_body":"Robust","is_correct":"0"},
+{"alt_id":"a003","alt_body":"Proximity","is_correct":"0"},
+{"alt_id":"a0030","alt_body":"Standard Viscosity Gander","is_correct":"0"},
+{"alt_id":"a004","alt_body":"Similarity","is_correct":"0"},
+{"alt_id":"a005","alt_body":"5-10 % among men, less than 1% among women","is_correct":"1"},
+{"alt_id":"a006","alt_body":"5-10 % among women, less than 1 % among men","is_correct":"0"},
+{"alt_id":"a007","alt_body":"Around 5 % for both men and women","is_correct":"0"},
+{"alt_id":"a008","alt_body":"It varies - 15-20 % among men in US\/EU, but only around 5 % in Asia. About a third of that for women. ","is_correct":"0"},
+{"alt_id":"a009","alt_body":"Web Content Accessibility Guidelines","is_correct":"1"},
+{"alt_id":"a011","alt_body":"Web Community for Administrators and Gurus","is_correct":"0"},
+{"alt_id":"a012","alt_body":"Web Content Assessment Group  ","is_correct":"0"},
+{"alt_id":"a013","alt_body":"Robust","is_correct":"1"},
+{"alt_id":"a015","alt_body":"Operable","is_correct":"0"},
+{"alt_id":"a016","alt_body":"Understandable","is_correct":"0"},
+{"alt_id":"a017","alt_body":"A set of psychological theories on how the brain processes perceptual input.","is_correct":"1"},
+{"alt_id":"a019","alt_body":"A set of EU laws that regulate digital information exchange.","is_correct":"0"},
+{"alt_id":"a020","alt_body":"A set of priciples that were used in art during the renaissanece, and is still useful in interaction design.","is_correct":"0"},
+{"alt_id":"a021","alt_body":"Perceivable","is_correct":"1"},
+{"alt_id":"a029","alt_body":"Scalable Vector Graphics","is_correct":"1"},
+{"alt_id":"a031","alt_body":"Simple Vector Graphics","is_correct":"0"},
+{"alt_id":"a032","alt_body":"Standard Vector Graphics","is_correct":"0"}
+]
+}
+,{"type":"table","name":"belongs_to","database":"quizbase","data":
+[
+{"question_id":"q001","test_id":"t001"},
+{"question_id":"q001","test_id":"t003"},
+{"question_id":"q002","test_id":"t002"},
+{"question_id":"q002","test_id":"t003"},
+{"question_id":"q003","test_id":"t001"},
+{"question_id":"q004","test_id":"t001"},
+{"question_id":"q004","test_id":"t003"},
+{"question_id":"q005","test_id":"t002"},
+{"question_id":"q005","test_id":"t003"},
+{"question_id":"q007","test_id":"t002"},
+{"question_id":"q008","test_id":"t001"},
+{"question_id":"q008","test_id":"t002"}
+]
+}
+,{"type":"table","name":"isfor","database":"quizbase","data":
+[
+{"question_id":"008","alt_id":"a031"},
+{"question_id":"q001","alt_id":"a001"},
+{"question_id":"q001","alt_id":"a002"},
+{"question_id":"q001","alt_id":"a003"},
+{"question_id":"q001","alt_id":"a004"},
+{"question_id":"q002","alt_id":"a005"},
+{"question_id":"q002","alt_id":"a006"},
+{"question_id":"q002","alt_id":"a007"},
+{"question_id":"q002","alt_id":"a008"},
+{"question_id":"q003","alt_id":"a0010"},
+{"question_id":"q003","alt_id":"a009"},
+{"question_id":"q003","alt_id":"a011"},
+{"question_id":"q003","alt_id":"a012"},
+{"question_id":"q004","alt_id":"a0014"},
+{"question_id":"q004","alt_id":"a013"},
+{"question_id":"q004","alt_id":"a015"},
+{"question_id":"q004","alt_id":"a016"},
+{"question_id":"q005","alt_id":"a0018"},
+{"question_id":"q005","alt_id":"a017"},
+{"question_id":"q005","alt_id":"a019"},
+{"question_id":"q005","alt_id":"a020"},
+{"question_id":"q006","alt_id":"a0022"},
+{"question_id":"q006","alt_id":"a015"},
+{"question_id":"q006","alt_id":"a016"},
+{"question_id":"q006","alt_id":"a021"},
+{"question_id":"q007","alt_id":"a0022"},
+{"question_id":"q007","alt_id":"a015"},
+{"question_id":"q007","alt_id":"a016"},
+{"question_id":"q007","alt_id":"a021"},
+{"question_id":"q008","alt_id":"a0030"},
+{"question_id":"q008","alt_id":"a029"},
+{"question_id":"q008","alt_id":"a032"}
+]
+}
+,{"type":"table","name":"question","database":"quizbase","data":
+[
+{"question_id":"q001","question_body":"Which of these is not a Gestalt law?","subject":"Gestalt psychology","course":"grägrä01"},
+{"question_id":"q002","question_body":"When making websites, one should take into consideration people with disabilities. One of the most common is colour blindness. Roughly how common is it?","subject":"Accessibility","course":"grägrä01"},
+{"question_id":"q003","question_body":"What is the abbreviation WCAG?","subject":"Accessibility","course":"grägrä01"},
+{"question_id":"q004","question_body":"'Maximize compatibility with current and future user agents' is part of the WCAG 2.1. Which principle does it belong to?","subject":"Accessibility","course":"grägrä01"},
+{"question_id":"q005","question_body":"What are the Gestalt laws?","subject":"Gestalt psychology","course":"grägrä01"},
+{"question_id":"q006","question_body":"What WCAG category does the following belong to: 'All non-text content that is presented to the user has a text alternative that serves the equivalent purpose'","subject":"Accessibility","course":"grägrä01"},
+{"question_id":"q007","question_body":"The default human language of each Web page can be programmatically determined' is part of the WCAG. Which principle does it belong to?","subject":"Accessibility","course":"grägrä01"},
+{"question_id":"q008","question_body":"In graphics, What does the abbreviation SVG mean?","subject":"graphics","course":"grägrä01"}
+]
+}
+,{"type":"table","name":"result","database":"quizbase","data":
+[
+{"student_id":"13phde","question_id":"q001","date":"1537574400","score":"1"},
+{"student_id":"13phde","question_id":"q001","date":"1540252800","score":"1"},
+{"student_id":"13phde","question_id":"q002","date":"1540252800","score":"1"},
+{"student_id":"13phde","question_id":"q003","date":"1537574400","score":"1"},
+{"student_id":"13phde","question_id":"q004","date":"1537574400","score":"1"},
+{"student_id":"13phde","question_id":"q004","date":"1540252800","score":"1"},
+{"student_id":"13phde","question_id":"q005","date":"1540252800","score":"1"},
+{"student_id":"13phde","question_id":"q008","date":"1537574400","score":"1"},
+{"student_id":"13shco","question_id":"q001","date":"1537488000","score":"1"},
+{"student_id":"13shco","question_id":"q001","date":"1540166400","score":"1"},
+{"student_id":"13shco","question_id":"q002","date":"1537574400","score":"0"},
+{"student_id":"13shco","question_id":"q002","date":"1540166400","score":"0"},
+{"student_id":"13shco","question_id":"q003","date":"1537488000","score":"0"},
+{"student_id":"13shco","question_id":"q004","date":"1537488000","score":"0"},
+{"student_id":"13shco","question_id":"q004","date":"1540166400","score":"1"},
+{"student_id":"13shco","question_id":"q005","date":"1537574400","score":"1"},
+{"student_id":"13shco","question_id":"q005","date":"1540166400","score":"0"},
+{"student_id":"13shco","question_id":"q007","date":"1537574400","score":"0"},
+{"student_id":"13shco","question_id":"q008","date":"1537488000","score":"1"},
+{"student_id":"13shco","question_id":"q008","date":"1537574400","score":"0"},
+{"student_id":"13wiro","question_id":"q001","date":"1537488000","score":"0"},
+{"student_id":"13wiro","question_id":"q001","date":"1540166400","score":"1"},
+{"student_id":"13wiro","question_id":"q002","date":"1537574400","score":"1"},
+{"student_id":"13wiro","question_id":"q002","date":"1540166400","score":"1"},
+{"student_id":"13wiro","question_id":"q003","date":"1537488000","score":"1"},
+{"student_id":"13wiro","question_id":"q004","date":"1537488000","score":"1"},
+{"student_id":"13wiro","question_id":"q004","date":"1540166400","score":"1"},
+{"student_id":"13wiro","question_id":"q005","date":"1537574400","score":"1"},
+{"student_id":"13wiro","question_id":"q005","date":"1540166400","score":"1"},
+{"student_id":"13wiro","question_id":"q007","date":"1537574400","score":"0"},
+{"student_id":"13wiro","question_id":"q008","date":"1537488000","score":"1"},
+{"student_id":"13wiro","question_id":"q008","date":"1537574400","score":"1"}
+]
+}
+,{"type":"table","name":"student","database":"quizbase","data":
+[
+{"student_id":"13phde","name":"Phedre Dulaney"},
+{"student_id":"13shco","name":"Sheldon_Cooper"},
+{"student_id":"13wiro","name":"Willow Rosenberg"}
+]
+}
+,{"type":"table","name":"takes","database":"quizbase","data":
+[
+{"student_id":"13phde","test_id":"t001","date":"1537574400"},
+{"student_id":"13phde","test_id":"t003","date":"1540252800"},
+{"student_id":"13shco","test_id":"t001","date":"1537488000"},
+{"student_id":"13shco","test_id":"t002","date":"1537574400"},
+{"student_id":"13shco","test_id":"t003","date":"1540166400"},
+{"student_id":"13wiro","test_id":"t001","date":"1537488000"},
+{"student_id":"13wiro","test_id":"t002","date":"1537574400"},
+{"student_id":"13wiro","test_id":"t003","date":"1540166400"}
+]
+}
+,{"type":"table","name":"test","database":"quizbase","data":
+[
+{"test_id":"t001","test_name":"ID Quiz 1, Te17A"},
+{"test_id":"t001","test_name":"ID Quiz 1, Te17B"},
+{"test_id":"t002","test_name":"ID Quiz 2, Te17A"},
+{"test_id":"t002","test_name":"ID Quiz 2, Te17B"},
+{"test_id":"t003","test_name":"ID Quiz 3, Te17A"}
+]
+}
+]
